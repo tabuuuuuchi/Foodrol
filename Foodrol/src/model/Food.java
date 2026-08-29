@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Food {
+public class Food implements Serializable {
 
 	//	フィールド
 	private int id;
