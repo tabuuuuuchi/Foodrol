@@ -1,21 +1,24 @@
 package model;
 
-public class Food {
+import java.io.Serializable;
+import java.time.LocalDate;
+
+public class Food implements Serializable {
 
 	//	フィールド
 	private int id;
 	private String name;
 	private String category;
-	private String strBestByDate;
-	private String strUseByDate;
+	private LocalDate bestByDate;
+	private LocalDate useByDate;
 
 	//	コンストラクタ
-	public Food(int id, String name, String category, String strBestByDate, String strUseByDate) {
+	public Food(int id, String name, String category, LocalDate bestByDate, LocalDate useByDate) {
 		this.id = id;
 		this.name = name;
 		this.category = category;
-		this.strBestByDate = strBestByDate;
-		this.strUseByDate = strUseByDate;
+		this.bestByDate = bestByDate;
+		this.useByDate = useByDate;
 	}
 
 	//	ゲッタ、セッタ
@@ -43,20 +46,20 @@ public class Food {
 		this.category = category;
 	}
 
-	public String getStrBestByDate() {
-		return strBestByDate;
+	public LocalDate getBestByDate() {
+		return bestByDate;
 	}
 
-	public void setStrBestByDate(String strBestByDate) {
-		this.strBestByDate = strBestByDate;
+	public void setBestByDate(LocalDate bestByDate) {
+		this.bestByDate = bestByDate;
 	}
 
-	public String getStrUseByDate() {
-		return strUseByDate;
+	public LocalDate getUseByDate() {
+		return useByDate;
 	}
 
-	public void setStrUseByDate(String strUseByDate) {
-		this.strUseByDate = strUseByDate;
+	public void setUseByDate(LocalDate useByDate) {
+		this.useByDate = useByDate;
 	}
 
 }
