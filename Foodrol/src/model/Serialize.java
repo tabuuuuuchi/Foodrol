@@ -11,7 +11,8 @@ import java.util.List;
 
 public class Serialize {
 
-	public static void seri(ArrayList<Food> list) {
+	//	オブジェクト保存
+	public static void serialize(ArrayList<Food> list) {
 		try {
 			ObjectOutputStream objOutStream = new ObjectOutputStream(
 					new FileOutputStream("src/model/Food.bin"));
@@ -25,7 +26,8 @@ public class Serialize {
 		}
 	}
 
-	public static ArrayList<Food> deseri() {
+	//	オブジェクト読み込み
+	public static ArrayList<Food> deserialize() {
 		List<Food> list = new ArrayList<Food>();
 		try {
 			ObjectInputStream objInStream = new ObjectInputStream(
